@@ -1,0 +1,7 @@
+{
+  "name": "calcRaiz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
