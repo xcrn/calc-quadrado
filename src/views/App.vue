@@ -18,11 +18,10 @@
           <div>
               <label>Calcular o quadrado do número: </label>
           </div>
-          <input v-model.number="num1" />
-
+          <input v-model.number="num1"/>
            <ion-button v-on:click="calculo" type="submit">Calcular</ion-button>
         </form>
-        <div  class="result">
+        <div>
           <p><strong>Resultado: {{ resultadoFinal }} </strong></p>
         </div>
       </div>
@@ -35,21 +34,20 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 
 export default {
-  name: 'Home',
+  name: 'App',
   data () {
     return {
       num1: 0,
-      resultadoFinal: 0, 
-      numero: 0,
-    };
-  },
-  methods: {
-   calculo() {
-    const { resultadoFinal, num1 } = this;
-    this.resultadoFinal = (num1 * num1);
-    console.log(resultadoFinal);
+      resultadoFinal: 0
     }
   },
+
+  methods: {
+   calculo () {
+    const { num1, resultadoFinal }= this;
+    this.resultadoFinal = (num1 * num1);
+  }
+},
   components: {
     IonContent,
     IonHeader,
